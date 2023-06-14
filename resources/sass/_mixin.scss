@@ -46,3 +46,8 @@
   @include set-top-pos($height);
   @content;
 }
+
+/* font size */
+@mixin fs-14 {
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+}

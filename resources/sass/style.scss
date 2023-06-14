@@ -7,3 +7,22 @@
 }
 
 /* rootページ */
+.btns {
+  @include fs-14;
+  column-gap: 30px;
+  &-wrap {
+    @include centering;
+    height: 100vh;
+  }
+  &__btn {
+    @include set-border(1px, solid, #3d4451);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #3d4451;
+      color: #fff;
+    }
+  }
+}
