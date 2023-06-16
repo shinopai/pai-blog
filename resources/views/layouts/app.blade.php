@@ -13,12 +13,12 @@
   <link href="https://fonts.bunny.net/css?family=abhaya-libre:500|alegreya-sans-sc:400,700|alexandria:400,700" rel="stylesheet" />
 
   <!-- Scripts -->
-  @vite(['resources/css/app.css', 'resources/sass/style.scss', 'resources/js/app.js'])
+  @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
   <!-- Page Content -->
-  <main class="main">
+  <main>
     {{ $slot }}
   </main>
 </body>

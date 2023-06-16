@@ -48,6 +48,12 @@
 }
 
 /* font size */
+@mixin fs-16 {
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+}
 @mixin fs-14 {
   font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+}
+@mixin fs-12 {
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
 }

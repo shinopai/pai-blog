@@ -1,9 +1,15 @@
 @import "_basic";
 @import "_mixin";
 
-/* main container */
-.main {
-  padding-top: 50px;
+/* エラーメッセージ */
+.err-msg {
+  @include fs-14;
+  li {
+    background-color: #ff4949;
+    color: #fff;
+    padding: 0.1em 0.1em 0.1em 0.5em;
+    margin-top: 5px;
+  }
 }
 
 /* rootページ */
