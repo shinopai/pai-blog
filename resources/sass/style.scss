@@ -17,6 +17,9 @@
   padding: 15px 0;
   border-bottom: 1px solid #b9b9b9;
   position: relative;
+  @include mq(w-768) {
+    padding: 15px;
+  }
   &__inner {
     justify-content: space-between;
     align-items: center;
