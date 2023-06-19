@@ -13,14 +13,23 @@
   <link href="https://fonts.bunny.net/css?family=abhaya-libre:500|alegreya-sans-sc:400,700|alexandria:400,700" rel="stylesheet" />
 
   <!-- Scripts -->
-  @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js'])
+  @vite(['resources/css/app.css', 'resources/sass/app.scss'])
 </head>
 
 <body>
   <!-- Page Content -->
+
+  <!-- header -->
+  @include('partials._header')
+
   <main>
     {{ $slot }}
   </main>
+
+  <!-- footer -->
+  @include('partials._footer')
+
+  @vite(['resources/js/app.js'])
 </body>
 
 </html>

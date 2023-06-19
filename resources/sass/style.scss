@@ -12,6 +12,58 @@
   }
 }
 
+/* header */
+.header {
+  padding: 15px 0;
+  border-bottom: 1px solid #b9b9b9;
+  position: relative;
+  &__inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: 50px;
+  }
+  &__user-name {
+    @include fs-14;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    &::after {
+      @include set-pseudo("/img/ico_arrow.webp", 12px, 12px);
+      right: -17px;
+    }
+  }
+  &-menu {
+    box-shadow: 9px 8px 8px -7px #b9b9b9;
+    border-radius: 5px;
+    width: 150px;
+    padding: 20px 15px;
+    position: absolute;
+    right: 10px;
+    bottom: -57px;
+    background-color: #fff;
+    display: none;
+    &__item {
+      margin-bottom: 5px;
+    }
+    &__link {
+      @include fs-14;
+    }
+  }
+}
+
+/* footer */
+.footer {
+  border-top: 1px solid #b9b9b9;
+  padding: 15px 0;
+  &__copy {
+    @include fs-12;
+    display: block;
+    text-align: center;
+  }
+}
+
 /* rootページ */
 .btns {
   @include fs-14;
