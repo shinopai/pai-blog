@@ -1,9 +1,17 @@
 <header class="header">
   <div class="wrap">
     <div class="header__inner flex">
+      @auth
+      <a href="{{ route('post.index') }}" class="contents">
+        <h1 class="header__logo">
+          <img src="{{ asset('img/logo_site.webp') }}" alt="paiBlog" srcset="">
+        </h1>
+      </a>
+      @else
       <h1 class="header__logo">
         <img src="{{ asset('img/logo_site.webp') }}" alt="paiBlog" srcset="">
       </h1>
+      @endauth
       @auth
       <div href="" class="header__user-name" id="userName">
         {{ Auth::user()->name }}さん
