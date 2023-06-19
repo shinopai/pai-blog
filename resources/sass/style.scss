@@ -107,3 +107,17 @@
     }
   }
 }
+
+/* ページネーション */
+.pagination {
+  justify-content: center;
+  column-gap: 15px;
+  margin: 50px 0 30px;
+  li {
+    @include fs-14;
+    padding: 0 0.5em;
+    &.active {
+      background-color: #b9b9b9;
+    }
+  }
+}
