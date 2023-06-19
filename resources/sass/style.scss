@@ -84,3 +84,26 @@
     }
   }
 }
+
+/* 一覧ページ */
+.post {
+  padding-top: 30px;
+  &__heading {
+    @include fs-20;
+  }
+  &-list {
+    margin-top: 20px;
+    &__item {
+      margin-bottom: 20px;
+      border: 1px solid #b9b9b9;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    &__title {
+      @include fs-16;
+    }
+    &__content {
+      @include fs-14;
+    }
+  }
+}
