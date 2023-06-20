@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\Post\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::prefix('post')->group(function () {
         Route::name('post.')->group(function () {
             // ブログ記事一覧
-            Route::get('/', [PostController::class, 'index'])->name('index');
+            Route::get('/', [App\Http\Controllers\Post\IndexController::class, 'index'])->name('index');
         });
     });
 
