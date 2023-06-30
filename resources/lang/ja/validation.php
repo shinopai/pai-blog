@@ -157,7 +157,9 @@ return [
         'name' => '名前',
         'email' => 'メールアドレス',
         'password' => 'パスワード',
-        'password_confirmation' => 'パスワード(確認)'
+        'password_confirmation' => 'パスワード(確認)',
+        'title' => '記事タイトル',
+        'content' => '記事内容'
     ],
 
 ];
