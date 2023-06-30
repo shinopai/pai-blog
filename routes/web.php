@@ -25,6 +25,9 @@ Route::middleware('auth')->group(function () {
             // ブログ記事一覧
             Route::get('/', [App\Http\Controllers\Post\IndexController::class, 'index'])->name('index');
 
+            // ブログ記事詳細
+            Route::get('/show/{post}', [App\Http\Controllers\Post\IndexController::class, 'show'])->name('show');
+
             // 新規ブログ作成画面
             Route::get('/create', [App\Http\Controllers\Post\CreateController::class, 'index'])->name('create.index');
 

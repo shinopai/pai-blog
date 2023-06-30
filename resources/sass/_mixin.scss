@@ -51,6 +51,9 @@
 @mixin fs-20 {
   font-size: clamp(1.8rem, 1.76rem + 0.2vw, 2rem);
 }
+@mixin fs-18 {
+  font-size: clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem);
+}
 @mixin fs-16 {
   font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
 }
