@@ -23,7 +23,7 @@
 
   <ul class="header-menu" id="headerMenu">
     <li class="header-menu__item">
-      <a href="" class="header-menu__link">新規記事作成</a>
+      <a href="{{ route('post.create.index') }}" class="header-menu__link">新規記事作成</a>
     </li>
     <li class="header-menu__item">
       <form method="POST" action="{{ route('logout') }}">

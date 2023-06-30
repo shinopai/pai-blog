@@ -1,4 +1,8 @@
 <x-app-layout>
+  <!-- フラッシュメッセージ -->
+  @if (session('flash'))
+  <p class="flash-msg">{{ session('flash') }}</p>
+  @endif
   <div class="post">
     <div class="wrap">
       <h2 class="post__heading">記事一覧</h2>

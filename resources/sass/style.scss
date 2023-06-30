@@ -12,6 +12,15 @@
   }
 }
 
+/* フラッシュメッセージ */
+.flash-msg {
+  @include fs-14;
+  background-color: #52d2a8;
+  color: #fff;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
 /* header */
 .header {
   padding: 15px 0;

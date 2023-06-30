@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Post\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +24,12 @@ Route::middleware('auth')->group(function () {
         Route::name('post.')->group(function () {
             // ブログ記事一覧
             Route::get('/', [App\Http\Controllers\Post\IndexController::class, 'index'])->name('index');
+
+            // 新規ブログ作成画面
+            Route::get('/create', [App\Http\Controllers\Post\CreateController::class, 'index'])->name('create.index');
+
+            // 新規ブログ作成
+            Route::post('/create/submit', [App\Http\Controllers\Post\CreateController::class, 'submit'])->name('create.submit');
         });
     });
 
