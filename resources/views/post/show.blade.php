@@ -14,12 +14,14 @@
         <span class="post-detail__datetime">投稿日時:{{ Carbon\Carbon::parse($post->created_at)->format('Y-m-d H:i:m') }}</span>
         <span class="post-detail__datetime">編集日時:{{ Carbon\Carbon::parse($post->updated_at)->format('Y-m-d H:i:m') }}</span>
         <div class="post-detail__footer flex">
+          @if(\MyFunc::isCurrentUser(Auth::id(), $post->user->id))
           <a href="{{ Route('post.edit.index', $post->id) }}" class="post-detail__btn">編集</a>
           <form action="{{ route('post.delete.submit', $post) }}" name="deleteForm" method="POST">
             @csrf
             @method('delete')
             <button type="button" class="post-detail__btn" onclick="submitForm()">削除</button>
           </form>
+          @endif
           <a href="{{ route('post.index') }}" class="post-detail__btn">戻る</a>
         </div>
       </div>
