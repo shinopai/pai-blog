@@ -18,7 +18,11 @@
           >編集日時:{{ Carbon\Carbon::parse($post->updated_at)->format('Y-m-d H:i:m') }}</span
         >
         <div class="post-detail__footer flex">
-          <a href="" class="post-detail__btn">編集</a>
+          <a
+            href="{{ Route('post.edit.index', $post->id) }}"
+            class="post-detail__btn"
+            >編集</a
+          >
           <a href="" class="post-detail__btn">削除</a>
           <a href="{{ route('post.index') }}" class="post-detail__btn">戻る</a>
         </div>

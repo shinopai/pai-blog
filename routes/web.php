@@ -33,6 +33,13 @@ Route::middleware('auth')->group(function () {
 
             // 新規ブログ作成
             Route::post('/create/submit', [App\Http\Controllers\Post\CreateController::class, 'submit'])->name('create.submit');
+
+
+            // 記事編集画面
+            Route::get('/edit/{post}', [App\Http\Controllers\Post\EditController::class, 'index'])->name('edit.index');
+
+            // 記事更新
+            Route::patch('/edit/{post}/submit', [App\Http\Controllers\Post\EditController::class, 'submit'])->name('edit.submit');
         });
     });
 
