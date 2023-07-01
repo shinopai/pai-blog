@@ -40,6 +40,9 @@ Route::middleware('auth')->group(function () {
 
             // 記事更新
             Route::patch('/edit/{post}/submit', [App\Http\Controllers\Post\EditController::class, 'submit'])->name('edit.submit');
+
+            // 記事削除
+            Route::delete('/delete/{post}', [App\Http\Controllers\Post\DeleteController::class, 'submit'])->name('delete.submit');
         });
     });
 
